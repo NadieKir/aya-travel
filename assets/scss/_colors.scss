@@ -1,0 +1,27 @@
+$color-white: #ffffff;
+$color-black: #001c20;
+$color-gray: #707070;
+$color-light-gray: #c1c1c1;
+
+$color-btn: #3c717e;
+$color-btn-02: #014a50;
+$color-btn-hovered: #5fccaf;
+
+$color-light-green: #3cffa2;
+$color-green: #44cc66;
+$color-navy: #00685c;
+$color-blue: #3cc2ff;
+$color-dark-blue: #092d2b;
+
+$color-gradient-first-screen: linear-gradient(
+  180deg,
+  rgba(12, 135, 187, 1) 0%,
+  rgba(12, 135, 187, 1) 30%,
+  rgba(215, 237, 249, 1) 100%
+);
+$color-gradient-dark: linear-gradient(
+  180deg,
+  rgba(0, 28, 32, 0) 0%,
+  rgba(0, 28, 32, 0.5) 20%,
+  rgba(0, 28, 32, 0.5) 100%
+);

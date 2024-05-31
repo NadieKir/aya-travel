@@ -1,0 +1,40 @@
+@import "./variables";
+@import "./colors";
+
+.main {
+  position: relative;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+  background: url("../images/fog-04.webp") no-repeat;
+  background-position: bottom center;
+
+  @media (max-width: $breakpoint-tablet) {
+    background-position: 50% 0%;
+  }
+}
+
+.first-screen {
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  padding-top: 140px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  &__image {
+    width: 100%;
+    height: calc(100dvh - 230px);
+    max-height: 750px;
+    z-index: -1;
+  }
+}

@@ -1,0 +1,49 @@
+@mixin gradientAnimation($start, $end, $transTime: $transition-base) {
+  position: relative;
+  background-size: 100%;
+  background-image: linear-gradient(90deg, $start 0%, $end 100%);
+  z-index: 5;
+
+  &:before {
+    content: "";
+    background-image: linear-gradient(90deg, $end 0%, $start 100%);
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -5;
+    transition: opacity $transTime;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin fogBackgroundWithAnimation($background-url, $fog-url: url(../images/fog-01.webp)) {
+  background: $fog-url no-repeat, $background-url no-repeat;
+  background-position: 95% 17%, 60% 0%;
+  background-size: auto, 1920px;
+  transition: background-position $transition-image-scale ease-out,
+    background-size $transition-image-scale ease-out;
+
+  &:hover {
+    background-position: calc(95% + 150px) 17%, 60% 0%;
+    background-size: auto, 2100px;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    background-size: auto, 1020px 300px;
+    background-position: 20% 60%, 70% 0px;
+
+    &:hover {
+      background-size: auto, 1120px 330px;
+      background-position: calc(20% + 100px) 60%, 70% 0px;
+    }
+  }
+}

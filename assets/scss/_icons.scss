@@ -1,0 +1,69 @@
+@import "./colors";
+
+@font-face {
+  font-family: "Icons";
+  src: url("/assets/fonts/Icons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "Icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cross:before {
+  content: "\e900";
+}
+.icon-phone:before {
+  content: "\e901";
+  color: $color-white;
+}
+.icon-mouse:before {
+  content: "\e909";
+  color: $color-light-gray;
+}
+.icon-arrow:before {
+  content: "\e90a";
+  color: $color-white;
+}
+.icon-boat:before {
+  content: "\e90b";
+  color: $color-light-green;
+}
+.icon-check:before {
+  content: "\e90c";
+  font-size: 30px;
+  color: $color-light-green;
+}
+.icon-instagram:before {
+  content: "\e90d";
+}
+.icon-island:before {
+  content: "\e90e";
+  color: $color-light-green;
+}
+.icon-target:before {
+  content: "\e90f";
+  font-size: 30px;
+  color: $color-blue;
+}
+.icon-telegram:before {
+  content: "\e910";
+}
+.icon-temperature:before {
+  content: "\e911";
+  color: #e3e3e3;
+}
+.icon-whatsapp:before {
+  content: "\e912";
+}
